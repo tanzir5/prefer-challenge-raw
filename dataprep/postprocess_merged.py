@@ -36,7 +36,7 @@ for chunk in tqdm(df_iterator, total=total_chunks):
             chunk[col].isna(),
             0, 1
         )
-        chunk.rename(columns={col: newcol})
+        chunk = chunk.rename(columns={col: newcol})
 
 
     if first_chunk:
